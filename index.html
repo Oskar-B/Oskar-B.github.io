@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <header>
+            <div class="header-logo-left">
+                <a href="index.html">
+                <img src="header/ob.svg" alt="Logo">
+                </a>
+            </div>
+
+            <nav>
+                <a href="#" class="menu-open hide-desktop"><img src="header/menu.svg" alt="menu-open hide-desktop"></a>
+                <ul>
+                    <li><a href="#" class="close hide-desktop"> <img src="header/cross.svg" alt="closing"></a></li>
+                    <li><a href="#" class="Home Button">Home</a></li>
+                    <li><a href="#" class="Projects Button">Projects</a></li>
+                    <li><a href="#" class="Eduction Button">Education</a></li>
+                    <li><a href="#" class="Contact Button"><img src="header/contact.svg" alt="Contact Me"></a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            <h1>Hey!</h1>
+            <h2>I'm</h2>
+            <h2 class="name">Oskar Besler</h2>
+            <h3>Computer Scientist </h3>
+            <p class="subhead">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#middle" class="myskills-cta" onclick="scrollToBottom()">My Skills</a>
+        </main>
+
+        <div class="nav2">
+            <div class="leftpie">
+                <h2 class="skills">Programming Skills</h2> 
+                <div class="pie-box">
+                    <svg viewBox="0 0 62 62">
+                        <circle class="pie1" cx="30" cy="30" cz="30" r="15.9"></circle>
+                        <circle class="pie2" cx="30" cy="30" cz="30" r="15.9"></circle>
+                        <circle class="pie3" cx="30" cy="30" cz="30" r="15.9"></circle>
+                        <circle class="pie4" cx="30" cy="30" cz="30" r="15.9"></circle>
+                        <circle class="pie5" cx="30" cy="30" cz="30" r="15.9"></circle>
+                        <circle class="pie6" cx="30" cy="30" cz="30" r="15.9"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="rightinfo">
+                <h2 class="quick">Quick Information</h2>
+                <dl class="dl-horizontal">
+                    <dt>Age:</dt>               <dd>24    </dd>
+                    <dt>Education:</dt>         <dd>Master of Science (Computer Science)    </dd>
+                    <dt>Languages:</dt>         <dd>German, English    </dd>
+                    <dt>E-Mail:</dt>            <dd>besler.oskar00@gmail.com    </dd>
+                    <dt>Location</dt>           <dd>Germany, Berlin    </dd>
+                    <dt>Specialisations:</dt>   <dd>Theoretical Computer Science</dd>
+                </dl>
+             </div> 
+        </div>
+        <p class="subhead2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+    <div class="border">
+        <nav3>
+            <h4>© 2025 by Oskar Besler</h4>
+            <ul>
+                    <li><a href="#" class="github"> <img src="bottom/github.svg" alt="closing"></a></li>
+                    <li><a href="#" class="linkedin"> <img src="bottom/linked.svg" alt="closing"></a></li>
+                    <li><a href="#" class="xing"><img src="bottom/xing.svg" alt="Contact Me"></a></li>
+            </ul>
+        </nav3>
+    </div>
+    <script>
+
+        const menu  = document.querySelector('nav ul');
+        const menuBtn  = document.querySelector('.menu-open');
+        const closeBtn  = document.querySelector('.close');
+        const scrollBtn = document.querySelector('.myskills-cta');
+        const pies = document.querySelectorAll('circle');
+        const animationElements = document.querySelectorAll('.rightinfo');
+
+        const observer = new IntersectionObserver((entries) => {
+            for (let i = 0; i < entries.length; i++) {
+                const animationClass = `animation${i+1}`;
+                if (entries[i].isIntersecting) {
+                    entries[i].target.classList.add(animationClass);
+                } else {
+                    entries[i].target.classList.remove(animationClass);
+                }
+            }
+        },{threshold: 0.1}
+    );
+    const observer2 = new IntersectionObserver((entries) => {
+            for (let i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) {
+                    entries[i].target.classList.add('animate');
+                } else {
+                    entries[i].target.classList.remove('animate');
+                }
+            }
+        },{threshold: 0.5}
+    );
+    for (let i = 0; i < animationElements.length; i++) {
+        observer2.observe(animationElements[i]);
+    }
+    for (let i = 0; i < pies.length; i++) {
+        observer.observe(pies[i])
+    }
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('open')
+        })
+
+        closeBtn.addEventListener('click', () => {
+            menu.classList.remove('open')
+        })
+
+        function scrollToBottom() {
+          window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+          });
+        }
+
+    </script>
+    </body>
+</html>
