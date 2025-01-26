@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/projects.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-logo-left">
+                <a href="/index.html">
+                <img src="/../../header/ob.svg" alt="Logo">
+                </a>
+            </div>
+
+            <nav>
+                <a href="#" class="menu-open hide-desktop"><img src="/../../header/menu.svg" alt="menu-open hide-desktop"></a>
+                <ul>
+                    <li><a href="#" class="close hide-desktop"> <img src="/../../header/cross.svg" alt="closing"></a></li>
+                    <li><a href="/index.html" class="Home Button">Home</a></li>
+                    <li><a href="/html/projects/projects.html" class="Projects Button">Projects</a></li>
+                    <li><a href="#" class="Eduction Button">Education</a></li>
+                    <li><a href="#" class="Contact Button"><img src="/../../header/contact.svg" alt="Contact Me"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <ul class="firstRowProjects">
+
+                <li><a href="https://github.com/Oskar-B/Oskar-B.github.io">
+                    <div class="projectBox" data-tilt>
+                        <h2>My Personal Website</h2>
+                        <p> Designed and developed a personal website using HTML, CSS, and JavaScript 
+                        to showcase my skills, projects, and achievements.</p>
+                    </div>
+                </a></li>
+                <li><a href="https://github.com/Oskar-B/food-recipes">
+                    <div class="projectBox" data-tilt>
+                        <h2>Recipe Browser Backend</h2>
+                        <p> A Java Spring Boot backend application with a RESTful API to retrieve food-recipes.</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="projectBox" data-tilt>
+                        <h2>Recipe Browser Frontend</h2>
+                        <p> A React front-end to receive recipes in a dynamic, user-friendly interface that fetches and
+                             displays food-recipes from an backend. (Coming Soon)</p>
+                    </div>
+                </a></li>
+            </ul>
+        </main>
+    </div>
+    <div class="border">
+        <nav3>
+            <h4>© 2025 by Oskar Besler</h4>
+            <ul>
+                    <li><a href="https://github.com/Oskar-B" class="github"> <img src="/../../bottom/github.svg" alt="closing"></a></li>
+                    <li><a href="#" class="linkedin"> <img src="/../../bottom/linked.svg" alt="closing"></a></li>
+                    <li><a href="https://www.xing.com/profile/Oskar_Besler/web_profiles" class="xing"><img src="/../../bottom/xing.svg" alt="Contact Me"></a></li>
+            </ul>
+        </nav3>
+    </div>
+    <script src="/../../javascript/vanilla-tilt.js"></script>
+    <script>
+    const menu  = document.querySelector('nav ul');
+    const menuBtn  = document.querySelector('.menu-open');
+    const closeBtn  = document.querySelector('.close');
+    const programElements = document.querySelectorAll('.firstRowProjects');
+
+    const observer2 = new IntersectionObserver((entries) => {
+        for (let i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) {
+                entries[i].target.classList.add('animate');
+            } else {
+                entries[i].target.classList.remove('animate');
+            }
+        }
+    },{threshold: 0}
+    );
+    for (let i = 0; i < programElements.length; i++) {
+    observer2.observe(programElements[i]);
+    }
+    menuBtn.addEventListener('click', () => {
+    menu.classList.add('open')
+})
+
+    closeBtn.addEventListener('click', () => {
+        menu.classList.remove('open')
+    })
+    </script>
+    </body>
+</html>

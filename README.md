@@ -7,7 +7,8 @@ Welcome to the repository for my personal website! This project is currently a w
 - **Homepage**: Complete  
   Features interactive animations, including a cool circle diagram.
   
-- **Project Page**: Under construction
+- **Project Page**: Adding more Projects!
+Features interactive tilt animation.
 
 - **Education Page**: Coming soon
 
