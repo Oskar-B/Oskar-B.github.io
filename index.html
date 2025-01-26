@@ -23,7 +23,7 @@
                 <a href="#" class="menu-open hide-desktop"><img src="header/menu.svg" alt="menu-open hide-desktop"></a>
                 <ul>
                     <li><a href="#" class="close hide-desktop"> <img src="header/cross.svg" alt="closing"></a></li>
-                    <li><a href="#" class="Home Button">Home</a></li>
+                    <li><a href="index.html" class="Home Button">Home</a></li>
                     <li><a href="#" class="Projects Button">Projects</a></li>
                     <li><a href="#" class="Eduction Button">Education</a></li>
                     <li><a href="#" class="Contact Button"><img src="header/contact.svg" alt="Contact Me"></a></li>
@@ -38,14 +38,12 @@
             <h2 class="name">Oskar Besler</h2>
             <h3>Computer Scientist </h3>
             <p class="subhead">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-                no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Hi, I'm Oskar! I'm currently completing my master's thesis at Freie Universität Berlin, with an expected graduation in March 2025.
+                As my current role wraps up at the end of March, I'm eager to embark on a new professional opportunity to advance my career.
+                As a working student, I had the opportunity to deepen my knowledge of software engineering, refine my skills in algorithmic design,
+                and strengthen my communication abilities. During my internship, I worked extensively with cloud services, 
+                specifically Kubernetes clusters on Google Kubernetes Engine (GKE), and container technologies like Docker.
+                If you're looking for someone with a strong analytical mindset, technical expertise, and a love for innovation, let's connect!
             </p>
             <a href="#middle" class="myskills-cta" onclick="scrollToBottom()">My Skills</a>
         </main>
@@ -63,6 +61,16 @@
                         <circle class="pie6" cx="30" cy="30" cz="30" r="15.9"></circle>
                     </svg>
                 </div>
+                    <ul class="frontRow">
+                        <li>C#</li>
+                        <li>HTML/CSS</li>
+                        <li>Python</li>
+                    </ul>
+                    <ul class="backRow">
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
             </div>
             <div class="rightinfo">
                 <h2 class="quick">Quick Information</h2>
@@ -70,30 +78,30 @@
                     <dt>Age:</dt>               <dd>24    </dd>
                     <dt>Education:</dt>         <dd>Master of Science (Computer Science)    </dd>
                     <dt>Languages:</dt>         <dd>German, English    </dd>
-                    <dt>E-Mail:</dt>            <dd>besler.oskar00@gmail.com    </dd>
+                    <dt>E-Mail:</dt>            <dd>connect@besler-oskar.de    </dd>
                     <dt>Location</dt>           <dd>Germany, Berlin    </dd>
                     <dt>Specialisations:</dt>   <dd>Theoretical Computer Science</dd>
                 </dl>
              </div> 
         </div>
+        
         <p class="subhead2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            I have a strong background in software engineering, with a focus on data structures, algorithms, and theoretical computer science.
+             In personal projects, I've worked with Python, Java, and C to build efficient solutions.
+              I also have experience with frontend development, having created responsive websites using modern web technologies.
+
+            Additionally, I've worked with cloud technologies like Kubernetes and Docker, and I'm familiar with agile software development practices.
+            My personal projects also include backend development with Java Spring Boot and applying continuous learning techniques for malware detection.
+            These experiences have helped me develop a well-rounded skill set in both frontend and backend development.
         </p>
     </div>
     <div class="border">
         <nav3>
             <h4>© 2025 by Oskar Besler</h4>
             <ul>
-                    <li><a href="#" class="github"> <img src="bottom/github.svg" alt="closing"></a></li>
+                    <li><a href="https://github.com/Oskar-B" class="github"> <img src="bottom/github.svg" alt="closing"></a></li>
                     <li><a href="#" class="linkedin"> <img src="bottom/linked.svg" alt="closing"></a></li>
-                    <li><a href="#" class="xing"><img src="bottom/xing.svg" alt="Contact Me"></a></li>
+                    <li><a href="https://www.xing.com/profile/Oskar_Besler/web_profiles" class="xing"><img src="bottom/xing.svg" alt="Contact Me"></a></li>
             </ul>
         </nav3>
     </div>
@@ -105,6 +113,8 @@
         const scrollBtn = document.querySelector('.myskills-cta');
         const pies = document.querySelectorAll('circle');
         const animationElements = document.querySelectorAll('.rightinfo');
+        const programElements1 = document.querySelectorAll('.frontRow');
+        const programElements2 = document.querySelectorAll('.backRow');
 
         const observer = new IntersectionObserver((entries) => {
             for (let i = 0; i < entries.length; i++) {
@@ -127,6 +137,12 @@
             }
         },{threshold: 0.5}
     );
+    for (let i = 0; i < programElements1.length; i++) {
+        observer2.observe(programElements1[i]);
+    }
+    for (let i = 0; i < programElements2.length; i++) {
+        observer2.observe(programElements2[i]);
+    }
     for (let i = 0; i < animationElements.length; i++) {
         observer2.observe(animationElements[i]);
     }

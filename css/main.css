@@ -111,13 +111,13 @@ margin-bottom: 0;
 .nav2{
     list-style: none;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .piechart {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 300px;
     margin-bottom: 5em;
 }
@@ -145,7 +145,7 @@ max-width: 500px;
 
 .animate {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .dl-horizontal dt {
@@ -186,6 +186,7 @@ max-width: 500px;
   }
 
   .subhead2{
+    font-size: 1.15em;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 3rem;
@@ -243,20 +244,20 @@ circle {
 }
 
 .pie1 {
-    stroke:#31418025;
+    stroke:rgba(19, 64, 240, 0.427);
 }
 .pie2 {
-    stroke:#31418040;
+    stroke:rgba(116, 142, 245, 0.877);
 }
 
 .pie3 {
-    stroke:#3141806c;
+    stroke:#617ef5;
 }
 .pie4{
-    stroke: #3141809e;
+    stroke: #536dd7;
 }
 .pie5{
-    stroke: #314180d4;
+    stroke: #4257ab;
 }
 .pie6{
     stroke: #314180;
@@ -298,6 +299,159 @@ circle {
       }
 }
 
+.frontRow {
+    justify-content: center;
+    gap: 2em;
+    display: flex;
+    list-style: none;
+    margin-bottom: 3em;
+    margin-right: 2.1em;
+
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    transition-delay: 0.2s;
+    transform: translateY(-50%);
+
+    li {
+
+        &:nth-of-type(1){
+            background: #314180;
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+        &:nth-of-type(2){
+            background: #4257ab;
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+        &:nth-of-type(3){
+            background: #536dd7;
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+        
+    }
+
+}
+
+.backRow {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 2.2em;
+    gap: 2em;
+    margin-bottom: 3em;
+
+    opacity: 0;
+    transition: all 0.8s ease-out;
+    transition-delay: 0.2s;
+    transform: translateY(-50%);
+
+    li {
+
+        &:nth-of-type(1){
+            background: #617ef5;
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+        &:nth-of-type(2){
+            background: rgba(116, 142, 245, 0.877);
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+        &:nth-of-type(3){
+            background: rgba(19, 64, 240, 0.427);
+            color: white;
+            padding: 1.1em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: .5em;
+            margin-bottom: 0;
+        }
+    }
+}
+.frontRow li:hover{
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+.backRow li:hover {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 @media (min-width: 768px) {
     .wrap {
         margin: 0 4em;
@@ -325,6 +479,9 @@ circle {
         height: auto;
         width: auto;
     }
+    .subhead {
+        font-size: 1.1rem;
+    }
 
     nav ul {
         position: unset;
@@ -347,6 +504,14 @@ circle {
         margin: auto
     }
 
+    .backRow {
+        gap: 3.5em;
+    }
+
+    .frontRow {
+        gap: 3.5em;
+    }
+
 }
 
 @media (min-width: 1350px) {
@@ -365,11 +530,12 @@ circle {
     }
     h3 {
         text-align: left;
-        transform: translateY(-180%);
+        transform: translateY(-160%);
         font-size: 2.5rem;
     }
 
     .subhead{
+        font-size: 1.2rem;
         text-align: left;
         box-sizing: border-box;
         display: block;
@@ -405,6 +571,7 @@ circle {
 
 
 .leftpie {
+    justify-content: center;
     margin-left: 3cm;
 }
 
@@ -416,6 +583,14 @@ circle {
         padding-left: 20em;
         padding-right: 20em;
         margin-bottom: 10rem;
+    }
+
+    .backRow {
+        gap: 5em;
+    }
+
+    .frontRow {
+        gap: 5em;
     }
 
 }
