@@ -34,7 +34,6 @@ Here are the planned steps to enhance and expand the website:
 
 ### Complete Existing Pages:
 
-- Add the Project Page.
 - Add the Education Page.
 - Add the Contact Me Page.
 
