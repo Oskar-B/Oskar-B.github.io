@@ -579,8 +579,8 @@ circle {
 
     a.myprojects-cta {
         width: 20%;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
     }
 
     main {
