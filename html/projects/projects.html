@@ -45,6 +45,55 @@
                         <p> A Java Spring Boot backend application with a RESTful API to retrieve food-recipes.</p>
                     </div>
                 </a></li>
+                <li><a href="https://drive.google.com/file/d/1sryMn-CyLKN18V3MLjxZbW_heJjSpMNS/view">
+                    <div class="projectBox" data-tilt>
+                        <h2>First Prize (Junior): 40th
+                            International Computational Geometry Week</h2>
+                        <p> Implementing two algorithms that approximate the solution to the Maximum Polygon Packing Problem using C++ and the CGAL library.</p>
+                    </div>
+                </a></li>
+            </ul>
+            <ul class="secondRowProjects">
+
+                <li><a href="https://www.kaggle.com/code/davidafonsovalente/experiments-4-adwin-retrain/notebook">
+                    <div class="projectBox" data-tilt>
+                        <h2>Malware Detection with Continual Learning</h2>
+                        <p> Enhanced a Kaggle malware detection model by incorporating continual learning
+                            techniques in Python.
+                        </p>
+                    </div>
+                </a></li>
+                <li><a href="https://github.com/JohannesVod/tinytracer">
+                    <div class="projectBox" data-tilt>
+                        <h2>Implementing a Raytracer</h2>
+                        <p>Implementing a simple raytracer from scratch in C, capable of rendering OBJ files exported from Blender.</p>
+                    </div>
+                </a></li>
+                <li><a href="https://git.imp.fu-berlin.de/besleo00/bachelor/-/tree/714be638739809c45240dede52e5106d3968b41a">
+                    <div class="projectBox" data-tilt>
+                        <h2>Implementing Routing Algorithms for Road Networks</h2>
+                        <p> Implementing several advanced routing algorithms, including ALT, Highway Hierarchies, and Highway Hierarchies Star.</p>
+                    </div>
+                </a></li>
+            </ul>
+
+            <ul class="thirdRowProjects">
+
+                <li><a href="https://github.com/Oskar-B/DNS-System">
+                    <div class="projectBox" data-tilt>
+                        <h2>Implementing a Local DNS System</h2>
+                        <p> Setting up a DNS system with a stub resolver, recursive resolver, authoritative name server, and an HTTP proxy,
+                             all programmed in Python and communicating locally on the same machine.
+                        </p>
+                    </div>
+                </a></li>
+                <li><a href="https://github.com/Oskar-B/Projekt">
+                    <div class="projectBox" data-tilt>
+                        <h2>Data Analysis using PostgreSQL</h2>
+                        <p>Cleaning Kaggle-sourced country happiness data, building a PostgreSQL database to analyze it,
+                             and developing a Python-based GUI for querying the data.</p>
+                    </div>
+                </a></li>
                 <li><a href="#">
                     <div class="projectBox" data-tilt>
                         <h2>Recipe Browser Frontend</h2>
@@ -60,7 +109,7 @@
             <h4>© 2025 by Oskar Besler</h4>
             <ul>
                     <li><a href="https://github.com/Oskar-B" class="github"> <img src="/../../bottom/github.svg" alt="closing"></a></li>
-                    <li><a href="#" class="linkedin"> <img src="/../../bottom/linked.svg" alt="closing"></a></li>
+                    <li><a href="https://www.linkedin.com/in/oskar-besler-650676349/" class="linkedin"> <img src="/../../bottom/linked.svg" alt="closing"></a></li>
                     <li><a href="https://www.xing.com/profile/Oskar_Besler/web_profiles" class="xing"><img src="/../../bottom/xing.svg" alt="Contact Me"></a></li>
             </ul>
         </nav3>
@@ -71,6 +120,8 @@
     const menuBtn  = document.querySelector('.menu-open');
     const closeBtn  = document.querySelector('.close');
     const programElements = document.querySelectorAll('.firstRowProjects');
+    const programElements2 = document.querySelectorAll('.secondRowProjects');
+    const programElements3 = document.querySelectorAll('.thirdRowProjects');
 
     const observer2 = new IntersectionObserver((entries) => {
         for (let i = 0; i < entries.length; i++) {
@@ -84,6 +135,8 @@
     );
     for (let i = 0; i < programElements.length; i++) {
     observer2.observe(programElements[i]);
+    observer2.observe(programElements2[i]);
+    observer2.observe(programElements3[i]);
     }
     menuBtn.addEventListener('click', () => {
     menu.classList.add('open')

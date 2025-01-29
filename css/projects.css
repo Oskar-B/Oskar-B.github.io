@@ -104,6 +104,38 @@ a {
     opacity: 1;
 }
 
+.secondRowProjects{
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    transition-delay: 0.1s;
+    justify-content: center;
+    list-style: none;
+    margin-right: auto;
+    text-align: center;
+    
+    li {
+        margin: 2em;
+    }
+}
+
+.thirdRowProjects{
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    transition-delay: 0.1s;
+    justify-content: center;
+    list-style: none;
+    margin-right: auto;
+    text-align: center;
+    
+    li {
+        margin: 2em;
+    }
+}
+
+.animate {
+    opacity: 1;
+}
+
 .projectBox {
     background: #314180;
     padding-left: 1em;
@@ -111,7 +143,7 @@ a {
     padding-bottom: 1em;
     padding-top: 0.1em;
     margin-top: 5em;
-    max-width: 350px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -202,7 +234,6 @@ a {
 
 @media (min-width: 1750px) {
     main {
-        height: 100vh;
         margin-left: 3cm;
     }
 
@@ -212,6 +243,27 @@ a {
     }
 
     .firstRowProjects {
+        display: flex;
+        justify-content: center;
+        transform: translateX(-4%);
+
+        li {
+            margin: 5em;
+        }
+    }
+
+    .secondRowProjects {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3em;
+        transform: translateX(-4%);
+
+        li {
+            margin: 5em;
+        }
+    }
+
+    .thirdRowProjects {
         display: flex;
         justify-content: center;
         margin-bottom: 3em;
